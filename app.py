@@ -18,8 +18,7 @@ if checkbox_mostrar_tabela:
 
     categorias = list(dados['Categoria'].unique())
     categorias.append('Todas')
-
-  categoria = st.sidebar.selectbox('Selecione a categoria para apresentar na tabela', options = categorias)
+    categoria = st.sidebar.selectbox('Selecione a categoria para apresentar na tabela', options = categorias)
 
     if categoria != 'Todas':
         df_categoria = dados.query('Categoria == @categoria')
